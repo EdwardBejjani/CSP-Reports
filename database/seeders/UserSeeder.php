@@ -15,26 +15,18 @@ class UserSeeder extends Seeder
     {
         User::create(
             [
-                'username' => 'pascale.b',
-                'first_name' => 'Pascale',
+                'username' => 'ramy.b',
+                'first_name' => 'Ramy',
                 'last_name' => 'Bader',
-                'email' => 'pascaletabet@cloudsp-lb.com',
-                'password' => bcrypt('pascalebader'),
-                'title' => 'Manager',
-                'role' => 'admin',
-                'employment_date' => '2025-09-01',
+                'password' => bcrypt('CloudSP@2025'),
             ]
         );
         User::create(
             [
-                'username' => 'ramy.b',
-                'first_name' => 'Ramy',
-                'last_name' => 'Bader',
-                'email' => 'ramybader@cloudsp-lb.com',
-                'password' => bcrypt('ramybader'),
-                'title' => 'CEO',
-                'role' => 'admin',
-                'employment_date' => '2015-01-01',
+                'username' => 'georges.f',
+                'first_name' => 'Georges',
+                'last_name' => 'Fares',
+                'password' => bcrypt('CloudSP@2024'),
             ]
         );
     }
