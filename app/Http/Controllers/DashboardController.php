@@ -28,13 +28,75 @@ class DashboardController extends Controller
         }
     }
 
-    public function new_users($date = null)
+    public function new_users_date()
     {
-        if ($date == null) {
+        return view('dashboard.index');
+    }
+
+    public function new_users(Request $request)
+    {
+        $year = $request->input('year');
+        $month = $request->input('month');
+
+        if ($year && $month) {
+            $selectedDate = Carbon::create($year, $month, 1);
+            if ($selectedDate->isAfter(Carbon::now())) {
+                return redirect()->back()->with('error', 'Cannot select a future date.');
+            }
+            $date = $selectedDate->format('Y-m');
+        } else {
             $date = Carbon::now()->format('Y-m');
         }
         $user = Auth::user();
-        $response = Dashboard::new_users($user->username, $user->password, $date);
-        return view('dashboard.new_users');
+        $response = Dashboard::new_users($user->username, $date);
+        return view('dashboard.new_users', compact('response', 'date'));
+    }
+
+    public function inactive_users_date()
+    {
+        return view('dashboard.index');
+    }
+    public function inactive_users(Request $request)
+    {
+        $year = $request->input('year');
+        $month = $request->input('month');
+
+        if ($year && $month) {
+            $selectedDate = Carbon::create($year, $month, 1);
+            if ($selectedDate->isAfter(Carbon::now())) {
+                return redirect()->back()->with('error', 'Cannot select a future date.');
+            }
+            $date = $selectedDate->format('Y-m');
+        } else {
+            $date = Carbon::now()->format('Y-m');
+        }
+        $user = Auth::user();
+        $response = Dashboard::inactive_users($user->username, $date);
+        return view('dashboard.inactive_users', compact('response', 'date'));
+    }
+
+    public function payments_date()
+    {
+        $user = Auth::user();
+
+        return view('dashboard.index', compact('user'));
+    }
+    public function payments(Request $request)
+    {
+        $year = $request->input('year');
+        $month = $request->input('month');
+        $collector = $request->input('collector');
+        if ($year && $month) {
+            $selectedDate = Carbon::create($year, $month, 1);
+            if ($selectedDate->isAfter(Carbon::now())) {
+                return redirect()->back()->with('error', 'Cannot select a future date.');
+            }
+            $date = $selectedDate->format('Y-m');
+        } else {
+            $date = Carbon::now()->format('Y-m');
+        }
+        $user = Auth::user();
+        $response = Dashboard::payments($user->username, $date, $collector);
+        return view('dashboard.payments', compact('response', 'date', 'collector'));
     }
 }

@@ -177,13 +177,109 @@ a.card-glass:hover h4 {
     transform: scale(1.01);
 }
 
-.table-glass {
-    background-color: rgba(0, 0, 0, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease-in-out;
+.table-container {
+    width: 100vw;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ==========================================================================
+   Radius Table
+   ========================================================================== */
+
+.glass-table {
+    background: linear-gradient(30deg, rgba(42, 42, 42, 0.3), rgba(42, 42, 42, 0.1), rgba(42, 42, 42, 0.2), rgba(42, 42, 42, 0.1), rgba(42, 42, 42, 0.3)) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto !important;
+    box-shadow: 0 4px 24px rgba(255, 255, 255, 0.12), 0 1.5px 8px rgba(0, 0, 0, 0.18) !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    color: #e0e0e0 !important;
+    border-radius: 1rem !important;
+}
+
+.table th,
+.glass-table th {
+    background: rgba(30, 30, 30, 0.45);
+    color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    padding: 1rem !important;
+}
+
+.glass-table th,
+.glass-table td {
+    background: rgba(30, 30, 30, 0.45) !important;
+    color: #e0e0e0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important;
+}
+
+thead,
+thead tr {
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+}
+
+thead tr th:first-child {
+    border-top-left-radius: 1rem !important;
+}
+
+thead tr th:last-child {
+    border-top-right-radius: 1rem !important;
+}
+
+tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 1rem !important;
+}
+
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 1rem !important;
+}
+
+.table td,
+.glass-table td {
+    background: rgba(20, 20, 20, 0.25);
+    color: #e0e0e0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.glass-table td {
+    background: rgba(20, 20, 20, 0.25) !important;
+    color: #e0e0e0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Remove Bootstrap's default table background */
+.glass-table,
+.table-hover {
+    background: transparent !important;
+}
+
+th,
+td {
+    white-space: normal;
+    padding: 8px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.table-wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    overflow-x: auto;
 }
 
 .btn-glass {
