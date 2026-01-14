@@ -5,7 +5,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 
 
-Route::get('/', [DashboardController::class, 'home'])->name('dashboard.home');
+Route::get('/', function () {
+    return redirect('/dashboard');
+});
 
 //Auth Routes
 Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <section class="d-flex align-items-center justify-content-center vh-100-custom">
+    <section class="d-flex align-items-center justify-content-center vh-100-custom mt-15">
         <div class="col-10 col-md-8 col-lg-6 col-xl-4">
             <div class="card-glass p-5">
                 <div class="card-body">
@@ -12,7 +12,8 @@
                         <img src="{{ asset('assets/images/logo.png') }}" alt="CSP Logo" class="mb-4" style="width: 20%;">
                     </div>
                     <h1 class="fw-bold text-white text-center mb-3 text-shadow mb-4">Login</h1>
-                    <form method="POST" action="{{ route('auth.loginSubmit') }}" class="d-flex flex-column align-items-center">
+                    <form method="POST" action="{{ route('auth.loginSubmit') }}"
+                        class="d-flex flex-column align-items-center">
                         @csrf
                         <div class="mb-3 w-100">
                             <input type="username" class="form-control input" id="username" name="username"

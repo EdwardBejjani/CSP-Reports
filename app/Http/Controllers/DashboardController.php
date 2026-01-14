@@ -7,24 +7,21 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use Illuminate\Pagination\LengthAwarePaginator;
+
 class DashboardController extends Controller
 {
-    public function home()
-    {
-        if (Auth::check()) {
-            return redirect()->route('dashboard.index');
-        } else {
-            return redirect()->route('auth.login');
-        }
-    }
-
     public function index()
     {
-        $user = Auth::user();
-        if (!$user) {
-            return redirect()->route('auth.login');
+        if (Auth::check()) {
+            $user = Auth::user();
+            $date = Carbon::now()->format('Y-m');
+            $new_users = Dashboard::new_users($user->username, $date);
+            $inactive_users = Dashboard::inactive_users($user->username, $date);
+            $payments = Dashboard::payments_vs_total($user->username, $date);
+            return view('dashboard.index', compact('new_users', 'inactive_users', 'payments'));
         } else {
-            return view('dashboard.index', compact('user'));
+            return redirect()->route('auth.login');
         }
     }
 
@@ -96,7 +93,21 @@ class DashboardController extends Controller
             $date = Carbon::now()->format('Y-m');
         }
         $user = Auth::user();
-        $response = Dashboard::payments($user->username, $date, $collector);
-        return view('dashboard.payments', compact('response', 'date', 'collector'));
+        $allPayments = Dashboard::payments($user->username, $date, $collector);
+
+        $perPage = 17;
+        $currentPage = request()->input('page', 1);
+        $currentPageItems = array_slice($allPayments, ($currentPage - 1) * $perPage, $perPage);
+        $payments = new LengthAwarePaginator($currentPageItems, count($allPayments), $perPage, $currentPage, [
+            'path' => $request->url(),
+            'query' => $request->query(),
+        ]);
+
+        return view('dashboard.payments', [
+            'payments' => $payments,
+            'allPayments' => $allPayments,
+            'date' => $date,
+            'collector' => $collector,
+        ]);
     }
 }

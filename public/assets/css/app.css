@@ -33,7 +33,7 @@ a {
 }
 
 .mt-15 {
-    margin-top: 15vh;
+    margin-top: 12vh;
 }
 
 .primary-text {
@@ -72,6 +72,14 @@ a {
 
 .card-glass {
     background: linear-gradient(35deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.5) 100%) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
+    backdrop-filter: blur(8px);
+}
+
+.card-glass-dark {
+    background: rgba(0, 0, 0, 0.3);
     border: 2px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
     border-radius: 2rem;
@@ -390,5 +398,9 @@ td {
 }
 
 .vh-100-custom {
-    min-height: 90vh;
+    min-height: 78vh !important;
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 1) !important;
 }
