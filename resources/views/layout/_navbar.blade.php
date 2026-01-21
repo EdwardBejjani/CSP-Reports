@@ -1,5 +1,5 @@
 <nav class="row custom-navbar fixed-top">
-    <div class="col-3 d-flex align-items-center justify-content-start gap-3">
+    <div class="col-3 d-flex align-items-center justify-content-start gap-2">
         <a href="{{ route('dashboard.index') }}" class="flex items-center">
             <img src="{{ asset('assets/images/logo.png') }}" alt="Logo" style="height: 40px">
         </a>
@@ -7,12 +7,18 @@
     </div>
     <div class="col-6 d-flex align-items-center justify-content-center gap-3">
         @auth
-            <a href="{{ route('dashboard.new_users_date') }}" class="btn-glass fw-bold text-white text-shadow"><i
-                    class="fa fa-user-plus"></i> New Users</a>
-            <a href="{{ route('dashboard.inactive_users_date') }}" class="btn-glass fw-bold text-white text-shadow"><i
-                    class="fa fa-user-minus"></i> Deactivated Users</a>
-            <a href="{{ route('dashboard.payments_date') }}" class="btn-glass fw-bold text-white text-shadow"><i
-                    class="fa fa-coins"></i> Payments</a>
+            <a href="{{ route('dashboard.new_users_date') }}" class="btn-glass fw-bold text-white text-shadow">
+                <i class="fa fa-user-plus me-1"></i> New Users
+            </a>
+            <a href="{{ route('dashboard.inactive_users_date') }}" class="btn-glass fw-bold text-white text-shadow">
+                <i class="fa fa-user-minus me-1"></i> Deactivated Users
+            </a>
+            <a href="{{ route('dashboard.payments_date') }}" class="btn-glass fw-bold text-white text-shadow">
+                <i class="fa fa-coins me-1"></i> Payments
+            </a>
+            <a href="{{ route('dashboard.support') }}" class="btn-glass fw-bold text-white text-shadow">
+                <i class="fa fa-phone me-1"></i> Support
+            </a>
         @endauth
     </div>
     <div class="col-3 d-flex align-items-center justify-content-end gap-3">

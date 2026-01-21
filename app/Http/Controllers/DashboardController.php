@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Dashboard;
 use Carbon\Carbon;
+use App\Models\Dashboard;
+use App\Models\GoogleSheets;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 class DashboardController extends Controller
@@ -109,5 +110,67 @@ class DashboardController extends Controller
             'date' => $date,
             'collector' => $collector,
         ]);
+    }
+
+    public function support(Request $request)
+    {
+        $query = DB::table('tickets');
+
+        if ($request->filled('search')) {
+            $searchTerm = $request->input('search');
+            $query->where(function ($q) use ($searchTerm) {
+                $q->where('username', 'like', "%{$searchTerm}%")
+                    ->orWhere('name', 'like', "%{$searchTerm}%")
+                    ->orWhere('problem', 'like', "%{$searchTerm}%");
+            });
+        }
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->input('status'));
+        }
+
+        $tickets = $query->paginate(10);
+        return view('dashboard.support', compact('tickets'));
+    }
+
+    public function graphs(Request $request)
+    {
+        $filters = $this->getGraphFilterOptions();
+
+        $query = DB::table('tickets');
+
+        if ($request->filled('month')) {
+            $query->whereMonth('created_at', $request->input('month'));
+        }
+
+        if ($request->filled('problem')) {
+            $query->where('problem', $request->input('problem'));
+        }
+
+        if ($request->filled('status')) {
+            $query->where('status', $request->input('status'));
+        }
+
+        if ($request->filled('support')) {
+            $query->where('support', $request->input('support'));
+        }
+
+        if ($request->filled('technician')) {
+            $query->where('technician', $request->input('technician'));
+        }
+
+        $tickets = $query->get();
+
+        return view('dashboard.graphs', array_merge(compact('tickets'), $filters));
+    }
+
+    private function getGraphFilterOptions()
+    {
+        $problems = DB::table('tickets')->distinct()->pluck('problem');
+        $statuses = DB::table('tickets')->distinct()->pluck('status');
+        $supports = DB::table('tickets')->distinct()->pluck('support');
+        $technicians = DB::table('tickets')->distinct()->pluck('technician');
+
+        return compact('problems', 'statuses', 'supports', 'technicians');
     }
 }

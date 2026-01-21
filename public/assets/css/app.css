@@ -21,7 +21,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, var(--secondary-color) 0%, var(--primary-color) 100%) !important;
+    background: #1d2e4b;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     background-size: 100vw 100vh !important;
@@ -45,12 +45,11 @@ a {
 }
 
 .custom-navbar {
-    background: linear-gradient(35deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.5) 100%) !important;
-    margin: 1rem;
-    padding: 0.5rem 1rem 0.5rem 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 0.5rem 1rem;
+    padding: 0.6rem 1rem 0.6rem 1.6rem;
     border-radius: 5rem;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(8px);
 }
 

@@ -23,4 +23,6 @@ Route::prefix('/dashboard')->name('dashboard.')->group(function () {
     Route::get('/inactive_users', [DashboardController::class, 'inactive_users'])->name('inactive_users');
     Route::get('/payments/date', [DashboardController::class, 'payments_date'])->name('payments_date');
     Route::get('/payments', [DashboardController::class, 'payments'])->name('payments');
+    Route::get('/support', [DashboardController::class, 'support'])->name('support');
+    Route::get('/graphs', [DashboardController::class, 'graphs'])->name('graphs');
 });

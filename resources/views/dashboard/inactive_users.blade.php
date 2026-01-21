@@ -11,6 +11,7 @@
                     <th>Shortname</th>
                     <th>Service Name</th>
                     <th>Deactivated on</th>
+                    <th>Reason</th>
                 </tr>
             </thead>
             <tbody>
@@ -20,6 +21,7 @@
                         <td>{{ $item['shortname'] }}</td>
                         <td>{{ $item['servicename'] }}</td>
                         <td>{{ $item['last_act'] }}</td>
+                        <td>{{ $item['note'] }}</td>
                     </tr>
                 @endforeach
             </tbody>

@@ -190,7 +190,7 @@ class Dashboard extends Model
             'note' => request()->input('note', ''),
             'pageIndex' => 1,
             'pageSize' => request()->input('pageSize', 999999),
-            'status' => request()->input('status', 7),
+            'status' => request()->input('status', 3),
             'usersFilter' => $prefix
         ];
         $total_users_response = Http::withBasicAuth($radius_user, $radius_pass)
