@@ -220,10 +220,10 @@ a.card-glass:hover h4 {
 
 .glass-table th,
 .glass-table td {
-    background: rgba(30, 30, 30, 0.45) !important;
-    color: #e0e0e0 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important;
+    background: rgba(30, 30, 30, 0.45);
+    color: #e0e0e0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 thead,
@@ -402,4 +402,29 @@ td {
 
 .text-muted {
     color: rgba(255, 255, 255, 1) !important;
+}
+
+.btn-danger {
+    background-color: rgba(255, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
+    padding: 0.2rem 0.5rem;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    width: fit-content;
+}
+
+
+.btn-success {
+    background-color: rgba(80, 255, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
+    padding: 0.2rem 0.5rem;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    width: fit-content;
 }

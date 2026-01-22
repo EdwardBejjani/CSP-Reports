@@ -6,7 +6,7 @@
 
     <section class="d-flex align-items-center justify-content-center vh-100-custom mt-15">
         <div class="col-10 col-md-8 col-lg-6 col-xl-4">
-            <div class="card-glass p-5">
+            <div class="card-glass-dark p-5">
                 <div class="card-body">
                     <div class="d-flex justify-content-center">
                         <img src="{{ asset('assets/images/logo.png') }}" alt="CSP Logo" class="mb-4" style="width: 20%;">

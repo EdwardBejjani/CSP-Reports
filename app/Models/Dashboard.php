@@ -11,7 +11,7 @@ class Dashboard extends Model
 {
     public static function new_users($user, $date)
     {
-        if ($user == 'ramy.b') {
+        if ($user == 'ramy.b' || $user == 'pascale.b') {
             $radius_user = 'ramy.b';
             $radius_pass = 'CloudSP@2025';
             $prefix = 'my';
@@ -58,7 +58,7 @@ class Dashboard extends Model
     }
     public static function inactive_users($user, $date)
     {
-        if ($user == 'ramy.b') {
+        if ($user == 'ramy.b' || $user == 'pascale.b') {
             $radius_user = 'ramy.b';
             $radius_pass = 'CloudSP@2025';
             $prefix = 'my';
@@ -110,7 +110,7 @@ class Dashboard extends Model
         $date_from = Carbon::createFromFormat('Y-m', $date)->startOfMonth()->format('Y-m-d');
         $date_till = Carbon::createFromFormat('Y-m', $date)->endOfMonth()->format('Y-m-d');
         $url = 'https://10.255.1.10/api/payments/list/';
-        if ($user == 'ramy.b') {
+        if ($user == 'ramy.b' || $user == 'pascale.b') {
             $radius_user = 'ramy.b';
             $radius_pass = 'CloudSP@2025';
         } elseif ($user == 'georges.f') {
@@ -141,8 +141,10 @@ class Dashboard extends Model
     {
         $date_from = Carbon::createFromFormat('Y-m', $date)->startOfMonth()->format('Y-m-d');
         $date_till = Carbon::createFromFormat('Y-m', $date)->endOfMonth()->format('Y-m-d');
-        $url = 'https://10.255.1.10/api/payments/list/';
-        if ($user == 'ramy.b') {
+        $due_from = Carbon::createFromFormat('Y-m', $date)->startOfMonth()->format('Y-m-d');
+        $due_till = Carbon::now()->format('Y-m-d');
+        $url = 'https://10.255.1.10/api/invoices/list/';
+        if ($user == 'ramy.b' || $user == 'pascale.b') {
             $radius_user = 'ramy.b';
             $radius_pass = 'CloudSP@2025';
             $prefix = 'my';
@@ -152,13 +154,18 @@ class Dashboard extends Model
             $prefix = 'data';
         }
         $search_params = [
-            'username' => request()->input('username', ''),
+            'id' => request()->input('id', ''),
+            'username' => request()->input('username', $prefix),
             'fullname' => request()->input('fullname', ''),
+            'collector' => request()->input('collector', ''),
+            'item' => request()->input('item', ''),
+            'type' => request()->input('type', ''),
+            'paid_from' => request()->input('paid_from', $due_from),
+            'paid_till' => request()->input('paid_till', $due_till),
             'date_from' => request()->input('date_from', $date_from),
             'date_till' => request()->input('date_till', $date_till),
-            'collected_by' => request()->input('collected_by', ''),
             'pageIndex' => 1,
-            'pageSize' => request()->input('pageSize', 500),
+            'pageSize' => request()->input('pageSize', 1000),
         ];
         $response = Http::withBasicAuth($radius_user, $radius_pass)
             ->withoutVerifying()
@@ -167,8 +174,8 @@ class Dashboard extends Model
         $payments_collected = 0;
         $amount_collected = 0;
         foreach ($response as $item) {
-            $payments_collected += 1;
-            $amount_collected += $item['amount'];
+            if ($item['remaining'] == '0.00')
+                $payments_collected += 1;
         }
         $search_params_users = [
             'username' => request()->input('username', ''),

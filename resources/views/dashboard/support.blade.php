@@ -56,7 +56,11 @@
                         <td class="text-white text-shadow p-2 text-center">{{ $ticket->technician ?: 'N/A' }}</td>
                         <td class="text-white text-shadow p-2 text-center">{{ $ticket->support}}</td>
                         <td class="text-white text-shadow p-2 text-center">{{ $ticket->shift }}</td>
-                        <td class="text-white text-shadow p-2 text-center">{{ $ticket->status }}</td>
+                        @if($ticket->status == "Open")
+                            <td class="d-flex justify-content-center p-2"><div class="btn-danger">{{ $ticket->status }}</div></td>
+                        @elseif ($ticket->status == "Closed")
+                            <td class="d-flex justify-content-center p-2"><div class="btn-success">{{ $ticket->status }}</div></td>
+                        @endif
                         <td class="text-white text-shadow p-2 text-center">{{ $ticket->note ?: 'N/A'  }}</td>
                         <td class="text-white text-shadow p-2 text-center">{{ $ticket->created_at }}</td>
                         @if ($ticket->status == "Closed")

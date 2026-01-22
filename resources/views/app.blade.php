@@ -10,6 +10,8 @@
     <link
         href="https://fonts.bunny.net/css?family=poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('assets/images/logo.png') }}" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-papm1Qw6k6R5Q5lHppZArYdS4x+h0cYfZcQ3VIAtF5NCz7L+G2kZZgwyU0vbzUKGwEuKXXSb9VjA36TObgGGeA=="
