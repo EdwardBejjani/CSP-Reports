@@ -20,6 +20,8 @@ class DashboardController extends Controller
             $new_users = Dashboard::new_users($user->username, $date);
             $inactive_users = Dashboard::inactive_users($user->username, $date);
             $payments = Dashboard::payments_vs_total($user->username, $date);
+            $payments_left = $payments['total_users'] - $payments['payments_collected'];
+            $payments['payments_left'] = $payments_left;
             return view('dashboard.index', compact('new_users', 'inactive_users', 'payments'));
         } else {
             return redirect()->route('auth.login');
