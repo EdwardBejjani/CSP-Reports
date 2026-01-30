@@ -52,7 +52,6 @@ class Dashboard extends Model
         foreach ($response as $item) {
             $table_data[] = $item;
         }
-        Log::info($table_data);
         return $table_data;
 
     }
@@ -101,7 +100,6 @@ class Dashboard extends Model
                 $table_data[] = $item;
             }
         }
-        Log::info($table_data);
         return $table_data;
     }
 
@@ -133,7 +131,6 @@ class Dashboard extends Model
         foreach ($response as $item) {
             $table_data[] = $item;
         }
-        Log::info($table_data);
         return $table_data;
     }
 
@@ -211,5 +208,72 @@ class Dashboard extends Model
             'total_users' => $total_users
         ];
         return $final_data;
+    }
+
+    public static function get_resellers($resellers = [])
+    {
+        $username = 'admin';
+        $password = 'CloudSP_@2025';
+        $url = 'https://10.255.1.10/reseller/resellerlist/?Reseller=&pageIndex=1&pageSize=1000';
+        $response = Http::withBasicAuth($username, $password)
+            ->withoutVerifying()
+            ->get($url)
+            ->json()['data'];
+        foreach ($response as $item) {
+            $resellers[] = $item;
+        }
+        return $resellers;
+    }
+
+    public static function get_transactions($date_from, $date_till, $includereseller, $paid_from = '', $paid_till = '', $credit = '', $debit = '', $username = '', $type = [])
+    {
+        if ($includereseller == 1) {
+            $includereseller = true;
+        } else {
+            $includereseller = false;
+        }
+        $username = 'admin';
+        $password = 'CloudSP_@2025';
+        $url = 'https://10.255.1.10/api/transactions/list/';
+        $search_params = [
+            'New' => request()->input('New', $type['New']),
+            'Renew' => request()->input('Renew', $type['Renew']),
+            'Transfer' => request()->input('Transfer', $type['Transfer']),
+            'Rent' => request()->input('Rent', $type['Rent']),
+            'Refill' => request()->input('Refill', $type['Refill']),
+            'Comission' => request()->input('Comission', $type['Comission']),
+            'Withdraw' => request()->input('Withdraw', $type['Withdraw']),
+            'Reset' => request()->input('Reset', $type['Reset']),
+            'Changeservice' => request()->input('Changeservice', $type['Changeservice']),
+            'Refund' => request()->input('Refund', $type['Refund']),
+            'Boost' => request()->input('Boost', $type['Boost']),
+            'Itv' => request()->input('Itv', $type['Itv']),
+            'ResetItv' => request()->input('ResetItv', $type['ResetItv']),
+            'Days' => request()->input('Days', $type['Days']),
+            'Addon' => request()->input('Addon', $type['Addon']),
+            'Rename' => request()->input('Rename', $type['Rename']),
+            'paid' => request()->input('paid', $type['paid']),
+            'unpaid' => request()->input('unpaid', $type['unpaid']),
+            'cash' => request()->input('cash', $type['cash']),
+            'discount' => request()->input('discount', $type['discount']),
+            'wu' => request()->input('wu', $type['wu']),
+            'cheque' => request()->input('cheque', $type['cheque']),
+            'maintenance' => request()->input('maintenance', $type['maintenance']),
+            'date_from' => request()->input('date_from', $date_from),
+            'date_till' => request()->input('date_till', $date_till),
+            'paid_from' => request()->input('paid_from', $paid_from),
+            'paid_till' => request()->input('paid_till', $paid_till),
+            'credit' => request()->input('credit', $credit),
+            'debit' => request()->input('debit', $debit),
+            'username' => request()->input('username', $username),
+            'includereseller' => request()->input('includereseller', $includereseller),
+            'pageIndex' => 1,
+            'pageSize' => request()->input('pageSize', 500),
+        ];
+        $response = Http::withBasicAuth($username, $password)
+            ->withoutVerifying()
+            ->get($url, $search_params)
+            ->json()['data'];
+        return $response;
     }
 }

@@ -1455,3 +1455,564 @@
   Press Ctrl+C to stop the server
 
   Failed to listen on 0.0.0.0:8000 (reason: Address already in use)
+
+   INFO  Server running on [http://0.0.0.0:8000].  
+
+  Press Ctrl+C to stop the server
+
+  2026-01-29 08:52:25 /login ........................................... ~ 1s
+  2026-01-29 08:52:26 /assets/css/app.css .......................... ~ 0.18ms
+  2026-01-29 08:52:26 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 08:52:51 /login ....................................... ~ 0.37ms
+  2026-01-29 08:52:51 /assets/css/app.css .......................... ~ 0.20ms
+  2026-01-29 08:52:52 /assets/images/logo.png ...................... ~ 0.20ms
+  2026-01-29 08:52:57 /login ..................................... ~ 500.78ms
+  2026-01-29 08:52:57 /login ....................................... ~ 0.16ms
+  2026-01-29 08:52:57 /assets/css/app.css .......................... ~ 0.14ms
+  2026-01-29 08:52:57 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 08:53:06 /login ........................................... ~ 1s
+  2026-01-29 08:53:07 /dashboard ....................................... ~ 4s
+  2026-01-29 08:53:12 /assets/css/app.css .......................... ~ 0.29ms
+  2026-01-29 08:53:12 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 09:20:40 /dashboard ....................................... ~ 3s
+  2026-01-29 09:20:44 /assets/css/app.css .......................... ~ 0.26ms
+  2026-01-29 09:20:44 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 09:21:30 /dashboard ....................................... ~ 4s
+  2026-01-29 09:21:35 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 09:21:35 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 09:21:58 /dashboard ....................................... ~ 5s
+  2026-01-29 09:22:03 /assets/css/app.css .......................... ~ 0.29ms
+  2026-01-29 09:22:03 /assets/images/logo.png ...................... ~ 0.19ms
+  2026-01-29 09:22:40 /dashboard ....................................... ~ 4s
+  2026-01-29 09:22:44 /assets/css/app.css .......................... ~ 0.26ms
+  2026-01-29 09:22:44 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 09:24:33 /dashboard ....................................... ~ 4s
+  2026-01-29 09:24:37 /assets/css/app.css .......................... ~ 0.28ms
+  2026-01-29 09:24:37 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 09:25:07 /dashboard ....................................... ~ 4s
+  2026-01-29 09:25:12 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 09:25:12 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 09:25:33 /dashboard ....................................... ~ 5s
+  2026-01-29 09:25:38 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 09:25:38 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 09:26:55 /dashboard ....................................... ~ 5s
+  2026-01-29 09:27:00 /assets/css/app.css .......................... ~ 0.21ms
+  2026-01-29 09:27:00 /assets/images/logo.png ...................... ~ 0.22ms
+  2026-01-29 09:27:59 /dashboard ....................................... ~ 4s
+  2026-01-29 09:28:03 /assets/css/app.css .......................... ~ 0.21ms
+  2026-01-29 09:28:03 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 09:28:29 /dashboard ....................................... ~ 5s
+  2026-01-29 09:28:34 /assets/css/app.css .......................... ~ 0.19ms
+  2026-01-29 09:28:34 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 09:30:53 /dashboard ....................................... ~ 5s
+  2026-01-29 09:30:58 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 09:30:58 /assets/images/logo.png ...................... ~ 0.19ms
+  2026-01-29 09:33:55 /dashboard ....................................... ~ 4s
+  2026-01-29 09:34:00 /assets/css/app.css .......................... ~ 0.19ms
+  2026-01-29 09:34:00 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 09:34:13 /dashboard ....................................... ~ 5s
+  2026-01-29 09:34:18 /assets/css/app.css .......................... ~ 0.18ms
+  2026-01-29 09:34:18 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 09:34:53 /dashboard ....................................... ~ 5s
+  2026-01-29 09:34:57 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 09:34:57 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 09:35:51 /dashboard ....................................... ~ 4s
+  2026-01-29 09:35:56 /assets/css/app.css .......................... ~ 0.32ms
+  2026-01-29 09:35:56 /assets/images/logo.png ...................... ~ 0.19ms
+  2026-01-29 09:36:48 /dashboard ....................................... ~ 4s
+  2026-01-29 09:36:53 /assets/css/app.css .......................... ~ 0.18ms
+  2026-01-29 09:36:53 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 09:37:17 /dashboard ....................................... ~ 4s
+  2026-01-29 09:37:22 /assets/css/app.css ........................ ~ 500.73ms
+  2026-01-29 09:37:22 /assets/images/logo.png ...................... ~ 0.21ms
+  2026-01-29 09:37:37 /dashboard ....................................... ~ 5s
+  2026-01-29 09:37:42 /assets/css/app.css .......................... ~ 0.20ms
+  2026-01-29 09:37:42 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 09:38:05 /dashboard ....................................... ~ 4s
+  2026-01-29 09:38:10 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 09:38:10 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 09:38:28 /dashboard ....................................... ~ 5s
+  2026-01-29 09:38:34 /assets/css/app.css .......................... ~ 0.18ms
+  2026-01-29 09:38:34 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 09:38:47 /dashboard ....................................... ~ 5s
+  2026-01-29 09:38:53 /assets/css/app.css .......................... ~ 0.20ms
+  2026-01-29 09:38:53 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 09:40:15 /dashboard ....................................... ~ 4s
+  2026-01-29 09:40:20 /assets/css/app.css .......................... ~ 0.32ms
+  2026-01-29 09:40:20 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 09:40:20 /assets/images/logo.png ...................... ~ 0.33ms
+  2026-01-29 09:40:34 /dashboard ....................................... ~ 4s
+  2026-01-29 09:40:39 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 09:40:39 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 09:40:39 /assets/images/logo.png ...................... ~ 0.37ms
+  2026-01-29 10:15:26 /dashboard ....................................... ~ 4s
+  2026-01-29 10:15:31 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 10:15:31 /assets/images/logo.png ...................... ~ 0.19ms
+  2026-01-29 10:16:00 /dashboard ....................................... ~ 5s
+  2026-01-29 10:16:06 /assets/css/app.css .......................... ~ 0.21ms
+  2026-01-29 10:16:06 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 10:16:48 /dashboard ....................................... ~ 4s
+  2026-01-29 10:16:53 /assets/css/app.css .......................... ~ 0.38ms
+  2026-01-29 10:16:53 /assets/images/logo.png ...................... ~ 0.27ms
+  2026-01-29 10:17:06 /dashboard ....................................... ~ 5s
+  2026-01-29 10:17:11 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 10:17:11 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 10:19:03 /dashboard ....................................... ~ 4s
+  2026-01-29 10:19:07 /assets/css/app.css .......................... ~ 0.33ms
+  2026-01-29 10:19:07 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 10:19:18 /dashboard ....................................... ~ 4s
+  2026-01-29 10:19:22 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 10:19:22 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 10:40:33 /dashboard ....................................... ~ 5s
+  2026-01-29 10:40:39 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 10:40:39 /assets/images/logo.png ...................... ~ 0.19ms
+  2026-01-29 10:42:21 /dashboard ....................................... ~ 4s
+  2026-01-29 10:42:25 /assets/css/app.css .......................... ~ 0.19ms
+  2026-01-29 10:42:25 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 10:42:32 /dashboard/transactions/form ................. ~ 0.32ms
+  2026-01-29 10:42:32 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 10:42:32 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 10:43:29 /dashboard/transactions/form ................. ~ 0.45ms
+  2026-01-29 10:43:29 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 10:43:29 /assets/images/logo.png ...................... ~ 0.24ms
+  2026-01-29 11:24:21 /dashboard/transactions/form ................. ~ 0.46ms
+  2026-01-29 11:24:22 /assets/css/app.css .......................... ~ 0.45ms
+  2026-01-29 11:24:22 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 11:24:41 /dashboard/transactions/form ................. ~ 0.31ms
+  2026-01-29 11:24:41 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 11:24:41 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 11:24:53 /dashboard/transactions/form ................. ~ 0.34ms
+  2026-01-29 11:24:53 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 11:24:53 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 11:25:04 /dashboard/transactions/form ................. ~ 0.32ms
+  2026-01-29 11:25:04 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 11:25:04 /assets/images/logo.png ...................... ~ 0.23ms
+  2026-01-29 11:25:18 /dashboard/transactions/form ................. ~ 0.41ms
+  2026-01-29 11:25:18 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 11:25:18 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 11:25:43 /dashboard/transactions/form ................. ~ 0.38ms
+  2026-01-29 11:25:43 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 11:25:43 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 11:26:15 /dashboard/transactions/form ............... ~ 500.81ms
+  2026-01-29 11:26:16 /assets/css/app.css .......................... ~ 0.15ms
+  2026-01-29 11:26:16 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 11:26:31 /dashboard/transactions/form ................. ~ 0.34ms
+  2026-01-29 11:26:31 /assets/css/app.css .......................... ~ 0.37ms
+  2026-01-29 11:26:31 /assets/images/logo.png ...................... ~ 0.20ms
+  2026-01-29 11:26:51 /dashboard/transactions/form ................. ~ 0.33ms
+  2026-01-29 11:26:51 /assets/css/app.css .......................... ~ 0.28ms
+  2026-01-29 11:26:51 /assets/images/logo.png ...................... ~ 0.24ms
+  2026-01-29 11:27:08 /dashboard/transactions/form ................. ~ 0.39ms
+  2026-01-29 11:27:08 /assets/css/app.css .......................... ~ 0.35ms
+  2026-01-29 11:27:08 /assets/images/logo.png ...................... ~ 0.19ms
+  2026-01-29 11:27:15 /dashboard/transactions/form ................. ~ 0.32ms
+  2026-01-29 11:27:15 /assets/css/app.css .......................... ~ 0.18ms
+  2026-01-29 11:27:15 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 11:31:47 /dashboard/transactions/form ................. ~ 0.35ms
+  2026-01-29 11:31:48 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 11:31:48 /assets/images/logo.png ...................... ~ 0.21ms
+  2026-01-29 11:32:04 /dashboard/transactions/form ............... ~ 500.79ms
+  2026-01-29 11:32:04 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 11:32:04 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 11:32:17 /dashboard/transactions/form ................. ~ 0.45ms
+  2026-01-29 11:32:18 /assets/css/app.css .......................... ~ 0.28ms
+  2026-01-29 11:32:18 /assets/images/logo.png ...................... ~ 0.18ms
+  2026-01-29 11:53:40 /dashboard/transactions/form ............... ~ 500.97ms
+  2026-01-29 11:53:54 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 11:53:56 /assets/css/app.css .......................... ~ 0.35ms
+  2026-01-29 11:53:56 /assets/images/logo.png ...................... ~ 0.31ms
+  2026-01-29 11:56:40 /dashboard/transactions/form ..................... ~ 3s
+  2026-01-29 12:15:43 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:15:45 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 12:15:45 /assets/images/logo.png ...................... ~ 0.19ms
+  2026-01-29 12:17:43 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:17:45 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 12:17:45 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 12:18:25 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:18:27 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 12:18:27 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 12:19:47 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:19:49 /assets/css/app.css .......................... ~ 0.31ms
+  2026-01-29 12:19:49 /assets/images/logo.png ...................... ~ 0.29ms
+  2026-01-29 12:20:43 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:20:45 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 12:20:45 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 12:20:57 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:20:59 /assets/css/app.css .......................... ~ 0.22ms
+  2026-01-29 12:20:59 /assets/images/logo.png ...................... ~ 0.19ms
+  2026-01-29 12:21:07 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:21:09 /assets/css/app.css .......................... ~ 0.32ms
+  2026-01-29 12:21:09 /assets/images/logo.png ...................... ~ 0.20ms
+  2026-01-29 12:21:27 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:21:29 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 12:21:29 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 12:23:22 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:23:24 /assets/css/app.css .......................... ~ 0.19ms
+  2026-01-29 12:23:24 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 12:24:03 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:24:05 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 12:24:05 /assets/images/logo.png ...................... ~ 0.18ms
+  2026-01-29 12:25:18 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:26:12 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:26:49 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:26:51 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 12:26:52 /assets/images/logo.png ...................... ~ 0.35ms
+  2026-01-29 12:27:27 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:27:28 /assets/css/app.css .......................... ~ 0.31ms
+  2026-01-29 12:27:28 /assets/images/logo.png ...................... ~ 0.22ms
+  2026-01-29 12:29:26 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:29:28 /assets/css/app.css .......................... ~ 0.33ms
+  2026-01-29 12:29:28 /assets/images/logo.png ...................... ~ 0.20ms
+  2026-01-29 12:29:44 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:29:45 /assets/css/app.css .......................... ~ 0.18ms
+  2026-01-29 12:29:46 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 12:30:08 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:30:10 /assets/css/app.css .......................... ~ 0.30ms
+  2026-01-29 12:30:10 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 12:31:40 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:31:42 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 12:31:42 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 12:34:07 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:34:09 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 12:34:09 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 12:36:32 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:36:34 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 12:36:34 /assets/images/logo.png ...................... ~ 0.18ms
+  2026-01-29 12:36:54 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:36:56 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 12:36:56 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 12:37:22 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:37:24 /assets/css/app.css .......................... ~ 0.32ms
+  2026-01-29 12:37:24 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 12:38:16 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:38:18 /assets/css/app.css .......................... ~ 0.18ms
+  2026-01-29 12:38:18 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 12:38:31 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:38:33 /assets/css/app.css .......................... ~ 0.26ms
+  2026-01-29 12:38:33 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 12:38:45 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:38:47 /assets/css/app.css .......................... ~ 0.18ms
+  2026-01-29 12:38:47 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 12:39:37 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:39:38 /assets/css/app.css .......................... ~ 0.18ms
+  2026-01-29 12:39:38 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 12:39:52 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:39:54 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 12:39:54 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 12:40:02 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:40:04 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 12:40:04 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 12:41:46 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:41:48 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 12:41:48 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 12:41:59 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:42:01 /assets/css/app.css .......................... ~ 0.21ms
+  2026-01-29 12:42:01 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 12:42:26 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:42:28 /assets/css/app.css .......................... ~ 0.15ms
+  2026-01-29 12:42:28 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 12:42:45 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:42:47 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 12:42:47 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 12:43:50 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:43:52 /assets/css/app.css .......................... ~ 0.32ms
+  2026-01-29 12:43:52 /assets/images/logo.png ...................... ~ 0.25ms
+  2026-01-29 12:44:06 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:44:08 /assets/css/app.css .......................... ~ 0.31ms
+  2026-01-29 12:44:08 /assets/images/logo.png ...................... ~ 0.21ms
+  2026-01-29 12:44:29 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:44:31 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 12:44:31 /assets/images/logo.png ...................... ~ 0.18ms
+  2026-01-29 12:44:56 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:44:58 /assets/css/app.css .......................... ~ 0.23ms
+  2026-01-29 12:44:58 /assets/images/logo.png ...................... ~ 0.19ms
+  2026-01-29 12:45:09 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:45:11 /assets/css/app.css .......................... ~ 0.19ms
+  2026-01-29 12:45:11 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 12:45:51 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:45:53 /assets/css/app.css .......................... ~ 0.31ms
+  2026-01-29 12:45:53 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 12:46:27 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:46:29 /assets/css/app.css .......................... ~ 0.20ms
+  2026-01-29 12:46:29 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 12:46:40 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:46:42 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 12:46:42 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 12:47:09 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:47:11 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 12:47:11 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 12:48:01 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:48:03 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 12:48:03 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 12:48:15 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:48:17 /assets/css/app.css .......................... ~ 0.31ms
+  2026-01-29 12:48:17 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 12:48:26 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:48:28 /assets/css/app.css .......................... ~ 0.20ms
+  2026-01-29 12:48:28 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 12:48:34 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:48:36 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 12:48:36 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 12:48:45 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 12:48:47 /assets/css/app.css .......................... ~ 0.18ms
+  2026-01-29 12:48:47 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 12:49:02 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 12:49:04 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 12:49:04 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 13:32:14 /dashboard/transactions/form ..................... ~ 2s
+  PHP Deprecated:  Optional parameter $paid_from declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $paid_till declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $credit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $debit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $username declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  2026-01-29 13:44:09 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 13:46:00 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 13:46:45 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 13:46:47 /assets/css/app.css .......................... ~ 0.22ms
+  2026-01-29 13:46:47 /assets/images/logo.png ...................... ~ 0.21ms
+  2026-01-29 13:46:50 /dashboard/transactions .......................... ~ 3s
+  2026-01-29 13:47:14 /dashboard/transactions .......................... ~ 3s
+  2026-01-29 13:47:38 /dashboard/transactions .......................... ~ 4s
+  2026-01-29 13:48:13 /dashboard/transactions .......................... ~ 4s
+  2026-01-29 13:48:17 .................................................. ~ 2s
+  2026-01-29 13:48:35 /dashboard/transactions .......................... ~ 3s
+  2026-01-29 13:48:59 /dashboard/transactions .......................... ~ 4s
+  2026-01-29 13:51:43 /dashboard/transactions .......................... ~ 3s
+  2026-01-29 13:51:59 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 13:52:02 /assets/css/app.css .......................... ~ 0.20ms
+  2026-01-29 13:52:02 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 13:53:02 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 13:53:06 /assets/css/app.css .......................... ~ 0.35ms
+  2026-01-29 13:53:06 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 13:54:40 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 13:54:43 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 13:54:43 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 13:55:58 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 13:56:00 /assets/css/app.css .......................... ~ 0.19ms
+  2026-01-29 13:56:12 /assets/css/app.css .......................... ~ 0.45ms
+  2026-01-29 13:56:12 /assets/images/logo.png ...................... ~ 0.18ms
+  2026-01-29 13:56:14 /assets/images/logo.png ...................... ~ 0.30ms
+  2026-01-29 13:56:18 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 13:56:21 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 13:56:21 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 13:56:22 /assets/images/logo.png ...................... ~ 0.37ms
+  2026-01-29 13:56:33 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 13:56:35 /assets/css/app.css .......................... ~ 0.21ms
+  2026-01-29 13:56:35 /assets/images/logo.png ...................... ~ 0.27ms
+  2026-01-29 13:56:36 /assets/images/logo.png ...................... ~ 0.28ms
+  2026-01-29 13:57:13 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 13:57:15 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 13:57:15 /assets/images/logo.png ...................... ~ 0.30ms
+  2026-01-29 13:57:16 /assets/images/logo.png ...................... ~ 0.27ms
+  2026-01-29 13:57:30 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 13:57:32 /assets/css/app.css ........................ ~ 500.64ms
+  2026-01-29 13:57:32 /assets/images/logo.png ...................... ~ 0.18ms
+  PHP Deprecated:  Optional parameter $paid_from declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $paid_till declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $credit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $debit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $username declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  2026-01-29 13:58:42 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 13:58:44 /assets/css/app.css .......................... ~ 0.15ms
+  2026-01-29 13:58:44 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 13:58:46 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 13:58:49 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 13:58:49 /assets/images/logo.png .................... ~ 500.66ms
+  2026-01-29 13:59:29 /dashboard/transactions .......................... ~ 3s
+  2026-01-29 13:59:32 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 13:59:32 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 13:59:33 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 13:59:36 /assets/css/app.css .......................... ~ 0.15ms
+  2026-01-29 13:59:36 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 14:00:14 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 14:00:17 /assets/css/app.css .......................... ~ 0.28ms
+  2026-01-29 14:00:17 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 14:00:20 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 14:00:23 /assets/css/app.css .......................... ~ 0.32ms
+  2026-01-29 14:00:23 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 14:00:36 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 14:00:39 /assets/css/app.css .......................... ~ 0.22ms
+  2026-01-29 14:00:39 /assets/images/logo.png ...................... ~ 0.36ms
+  2026-01-29 14:01:39 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 14:01:41 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 14:01:41 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 14:02:00 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 14:02:02 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 14:02:02 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 14:02:06 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 14:02:09 /assets/css/app.css .......................... ~ 0.14ms
+  2026-01-29 14:02:09 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 14:48:10 /dashboard/transactions .......................... ~ 3s
+  PHP Deprecated:  Optional parameter $paid_from declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $paid_till declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $credit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $debit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $username declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  2026-01-29 14:59:23 /dashboard ....................................... ~ 4s
+  2026-01-29 14:59:28 /assets/css/app.css .......................... ~ 0.32ms
+  2026-01-29 14:59:28 /assets/images/logo.png ...................... ~ 0.14ms
+  PHP Deprecated:  Optional parameter $paid_from declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $paid_till declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $credit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $debit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $username declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  2026-01-29 15:07:04 /dashboard/transactions/form ..................... ~ 3s
+  2026-01-29 15:07:30 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 15:07:32 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 15:07:32 /assets/images/logo.png ...................... ~ 0.31ms
+  2026-01-29 15:08:06 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 15:08:08 /assets/css/app.css .......................... ~ 0.26ms
+  2026-01-29 15:08:08 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 15:09:05 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 15:09:07 /assets/css/app.css .......................... ~ 0.21ms
+  2026-01-29 15:09:07 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 15:09:47 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 15:09:49 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 15:09:49 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 15:10:50 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 15:10:52 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 15:10:52 /assets/images/logo.png ...................... ~ 0.22ms
+  2026-01-29 15:11:02 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 15:11:04 /assets/css/app.css .......................... ~ 0.31ms
+  2026-01-29 15:11:04 /assets/images/logo.png ...................... ~ 0.32ms
+  2026-01-29 15:11:56 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 15:11:58 /assets/css/app.css .......................... ~ 0.39ms
+  2026-01-29 15:11:58 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 15:12:12 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 15:12:14 /assets/css/app.css .......................... ~ 0.23ms
+  2026-01-29 15:12:14 /assets/images/logo.png .................... ~ 500.59ms
+  2026-01-29 15:12:21 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 15:12:23 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 15:12:23 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 15:13:03 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 15:13:05 /assets/css/app.css .......................... ~ 0.34ms
+  2026-01-29 15:13:05 /assets/images/logo.png ...................... ~ 0.16ms
+  2026-01-29 15:13:24 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 15:14:11 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 15:14:14 /assets/css/app.css .......................... ~ 0.36ms
+  2026-01-29 15:14:14 /assets/images/logo.png ...................... ~ 0.17ms
+  PHP Deprecated:  Optional parameter $paid_from declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $paid_till declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $credit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $debit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $username declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  2026-01-29 15:14:24 /dashboard/transactions .......................... ~ 3s
+  2026-01-29 15:14:27 /assets/css/app.css .......................... ~ 0.22ms
+  2026-01-29 15:14:27 /assets/images/logo.png ...................... ~ 0.23ms
+  PHP Deprecated:  Optional parameter $paid_from declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $paid_till declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $credit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $debit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $username declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  2026-01-29 15:15:01 /dashboard/transactions .......................... ~ 4s
+  2026-01-29 15:15:05 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 15:15:05 /assets/images/logo.png ...................... ~ 0.19ms
+  2026-01-29 15:15:15 / ............................................ ~ 0.41ms
+  2026-01-29 15:15:15 /dashboard ....................................... ~ 4s
+  2026-01-29 15:15:19 /assets/css/app.css .......................... ~ 0.27ms
+  2026-01-29 15:15:19 /assets/images/logo.png ...................... ~ 0.17ms
+  2026-01-29 15:15:41 / ............................................ ~ 0.33ms
+  2026-01-29 15:15:41 /dashboard ....................................... ~ 4s
+  2026-01-29 15:15:46 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 15:15:46 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 15:15:48 /dashboard ....................................... ~ 5s
+  2026-01-29 15:15:54 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-29 15:15:55 /assets/css/app.css .......................... ~ 0.17ms
+  2026-01-29 15:15:55 /assets/images/logo.png ...................... ~ 0.14ms
+  PHP Deprecated:  Optional parameter $paid_from declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $paid_till declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $credit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $debit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $username declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  2026-01-29 15:16:01 /dashboard/transactions .......................... ~ 3s
+  2026-01-29 15:16:04 /assets/css/app.css .......................... ~ 0.24ms
+  2026-01-29 15:16:04 /assets/images/logo.png ...................... ~ 0.27ms
+  2026-01-29 15:16:09 / ............................................ ~ 0.41ms
+  2026-01-29 15:16:09 /dashboard ....................................... ~ 5s
+  2026-01-29 15:16:14 /assets/css/app.css .......................... ~ 0.40ms
+  2026-01-29 15:16:14 /assets/images/logo.png ...................... ~ 0.25ms
+  2026-01-29 15:38:19 / ............................................ ~ 0.40ms
+  2026-01-29 15:38:19 /dashboard ................................... ~ 0.13ms
+  2026-01-29 15:38:19 /login ....................................... ~ 0.13ms
+  2026-01-29 15:38:19 /assets/css/app.css .......................... ~ 0.14ms
+  2026-01-29 15:38:19 /assets/images/logo.png ...................... ~ 0.31ms
+  2026-01-29 15:38:45 /login ..................................... ~ 500.76ms
+  2026-01-29 15:38:46 /login ....................................... ~ 0.19ms
+  2026-01-29 15:38:46 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 15:38:46 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 15:39:01 /login ....................................... ~ 0.33ms
+  2026-01-29 15:39:01 /assets/css/app.css .......................... ~ 0.14ms
+  2026-01-29 15:39:01 /assets/images/logo.png ...................... ~ 0.13ms
+  2026-01-29 15:39:11 /login ........................................... ~ 1s
+  2026-01-29 15:39:12 /dashboard ....................................... ~ 4s
+  2026-01-29 15:39:16 /assets/css/app.css .......................... ~ 0.20ms
+  2026-01-29 15:39:16 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-29 15:39:41 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-29 15:39:43 /assets/css/app.css .......................... ~ 0.16ms
+  2026-01-29 15:39:43 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-29 15:39:57 /dashboard/transactions .......................... ~ 2s
+  2026-01-29 15:39:59 /assets/css/app.css .......................... ~ 0.21ms
+  2026-01-29 15:39:59 /assets/images/logo.png ...................... ~ 0.17ms
+
+   INFO  Server running on [http://0.0.0.0:8000].  
+
+  Press Ctrl+C to stop the server
+
+  2026-01-30 07:36:46 / .......................................... ~ 500.65ms
+  2026-01-30 07:36:47 /dashboard ................................... ~ 0.22ms
+  2026-01-30 07:36:47 /login ....................................... ~ 0.13ms
+  2026-01-30 07:36:48 /assets/css/app.css .......................... ~ 0.23ms
+  2026-01-30 07:36:48 /assets/images/logo.png .................... ~ 500.67ms
+  2026-01-30 07:37:06 /login ..................................... ~ 500.68ms
+  PHP Deprecated:  Optional parameter $paid_from declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $paid_till declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $credit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $debit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  PHP Deprecated:  Optional parameter $username declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 231
+  2026-01-30 07:37:07 /dashboard ....................................... ~ 5s
+  2026-01-30 07:37:11 /assets/css/app.css .......................... ~ 0.15ms
+  2026-01-30 07:37:11 /assets/images/logo.png .................... ~ 500.62ms
+  2026-01-30 07:47:31 /dashboard ....................................... ~ 4s
+  2026-01-30 07:47:35 /assets/css/app.css .......................... ~ 0.14ms
+  2026-01-30 07:47:35 /assets/images/logo.png .................... ~ 500.66ms
+  2026-01-30 07:49:09 /dashboard/transactions/form ..................... ~ 1s
+  2026-01-30 07:49:11 /assets/css/app.css .......................... ~ 0.15ms
+  2026-01-30 07:49:11 /assets/images/logo.png ...................... ~ 0.34ms
+
+   INFO  Environment modified. Restarting server...  
+
+   INFO  Server running on [http://0.0.0.0:8000].  
+
+  Press Ctrl+C to stop the server
+
+
+   INFO  Environment modified. Restarting server...  
+
+   INFO  Server running on [http://0.0.0.0:8000].  
+
+  Press Ctrl+C to stop the server
+
+
+   INFO  Environment modified. Restarting server...  
+
+   INFO  Server running on [http://0.0.0.0:8000].  
+
+  Press Ctrl+C to stop the server
+
+  PHP Deprecated:  Optional parameter $paid_from declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 228
+  PHP Deprecated:  Optional parameter $paid_till declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 228
+  PHP Deprecated:  Optional parameter $credit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 228
+  PHP Deprecated:  Optional parameter $debit declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 228
+  PHP Deprecated:  Optional parameter $username declared before required parameter $includereseller is implicitly treated as a required parameter in /srv/CSP-Reports-VOld/app/Models/Dashboard.php on line 228
+  2026-01-30 08:01:07 /dashboard ....................................... ~ 5s
+  2026-01-30 08:01:13 /assets/css/app.css .......................... ~ 0.34ms
+  2026-01-30 08:01:13 /assets/images/logo.png ...................... ~ 0.15ms
+  2026-01-30 08:01:37 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-30 08:01:39 /assets/css/app.css .......................... ~ 0.26ms
+  2026-01-30 08:01:39 /assets/images/logo.png ...................... ~ 0.14ms
+  2026-01-30 08:02:51 /dashboard/transactions/form ..................... ~ 2s
+  2026-01-30 08:02:53 /assets/css/app.css .......................... ~ 0.29ms
+  2026-01-30 08:02:54 /assets/images/logo.png ...................... ~ 0.18ms
+  2026-01-30 08:03:04 /dashboard/transactions .......................... ~ 3s
+  2026-01-30 08:03:08 /assets/css/app.css .......................... ~ 0.35ms
+  2026-01-30 08:03:08 /assets/images/logo.png ...................... ~ 0.20ms
