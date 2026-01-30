@@ -103,10 +103,8 @@ class Dashboard extends Model
         return $table_data;
     }
 
-    public static function payments($user, $date, $collector)
+    public static function payments($user, $date_from, $date_till, $collector)
     {
-        $date_from = Carbon::createFromFormat('Y-m', $date)->startOfMonth()->format('Y-m-d');
-        $date_till = Carbon::createFromFormat('Y-m', $date)->endOfMonth()->format('Y-m-d');
         $url = 'https://10.255.1.10/api/payments/list/';
         if ($user == 'ramy.b' || $user == 'pascale.b') {
             $radius_user = 'ramy.b';
@@ -116,18 +114,19 @@ class Dashboard extends Model
             $radius_pass = 'CloudSP@2024';
         }
         $search_params = [
-            'username' => request()->input('username', ''),
-            'fullname' => request()->input('fullname', ''),
-            'date_from' => request()->input('date_from', $date_from),
-            'date_till' => request()->input('date_till', $date_till),
-            'collected_by' => request()->input('collected_by', $collector),
+            'username' => '',
+            'fullname' => '',
+            'date_from' => $date_from,
+            'date_till' => $date_till,
+            'collected_by' => $collector,
             'pageIndex' => 1,
-            'pageSize' => request()->input('pageSize', 500),
+            'pageSize' => 999999,
         ];
         $response = Http::withBasicAuth($radius_user, $radius_pass)
             ->withoutVerifying()
             ->get($url, $search_params)
             ->json()['data'];
+        $table_data = [];
         foreach ($response as $item) {
             $table_data[] = $item;
         }
@@ -225,7 +224,7 @@ class Dashboard extends Model
         return $resellers;
     }
 
-    public static function get_transactions($date_from, $date_till, $includereseller, $paid_from = '', $paid_till = '', $credit = '', $debit = '', $username = '', $type = [])
+    public static function get_transactions($date_from, $date_till, $includereseller, $paid_from = '', $paid_till = '', $credit = '', $debit = '', $username_filter = '', $type = [])
     {
         if ($includereseller == 1) {
             $includereseller = true;
@@ -236,44 +235,76 @@ class Dashboard extends Model
         $password = 'CloudSP_@2025';
         $url = 'https://10.255.1.10/api/transactions/list/';
         $search_params = [
-            'New' => request()->input('New', $type['New']),
-            'Renew' => request()->input('Renew', $type['Renew']),
-            'Transfer' => request()->input('Transfer', $type['Transfer']),
-            'Rent' => request()->input('Rent', $type['Rent']),
-            'Refill' => request()->input('Refill', $type['Refill']),
-            'Comission' => request()->input('Comission', $type['Comission']),
-            'Withdraw' => request()->input('Withdraw', $type['Withdraw']),
-            'Reset' => request()->input('Reset', $type['Reset']),
-            'Changeservice' => request()->input('Changeservice', $type['Changeservice']),
-            'Refund' => request()->input('Refund', $type['Refund']),
-            'Boost' => request()->input('Boost', $type['Boost']),
-            'Itv' => request()->input('Itv', $type['Itv']),
-            'ResetItv' => request()->input('ResetItv', $type['ResetItv']),
-            'Days' => request()->input('Days', $type['Days']),
-            'Addon' => request()->input('Addon', $type['Addon']),
-            'Rename' => request()->input('Rename', $type['Rename']),
-            'paid' => request()->input('paid', $type['paid']),
-            'unpaid' => request()->input('unpaid', $type['unpaid']),
-            'cash' => request()->input('cash', $type['cash']),
-            'discount' => request()->input('discount', $type['discount']),
-            'wu' => request()->input('wu', $type['wu']),
-            'cheque' => request()->input('cheque', $type['cheque']),
-            'maintenance' => request()->input('maintenance', $type['maintenance']),
-            'date_from' => request()->input('date_from', $date_from),
-            'date_till' => request()->input('date_till', $date_till),
-            'paid_from' => request()->input('paid_from', $paid_from),
-            'paid_till' => request()->input('paid_till', $paid_till),
-            'credit' => request()->input('credit', $credit),
-            'debit' => request()->input('debit', $debit),
-            'username' => request()->input('username', $username),
-            'includereseller' => request()->input('includereseller', $includereseller),
-            'pageIndex' => 1,
-            'pageSize' => request()->input('pageSize', 500),
+            'New' => $type['New'],
+            'Renew' => $type['Renew'],
+            'Transfer' => $type['Transfer'],
+            'Rent' => $type['Rent'],
+            'Refill' => $type['Refill'],
+            'Comission' => $type['Comission'],
+            'Withdraw' => $type['Withdraw'],
+            'Reset' => $type['Reset'],
+            'Changeservice' => $type['Changeservice'],
+            'Refund' => $type['Refund'],
+            'Boost' => $type['Boost'],
+            'Itv' => $type['Itv'],
+            'ResetItv' => $type['ResetItv'],
+            'Days' => $type['Days'],
+            'Addon' => $type['Addon'],
+            'Rename' => $type['Rename'],
+            'paid' => $type['paid'],
+            'unpaid' => $type['unpaid'],
+            'cash' => $type['cash'],
+            'discount' => $type['discount'],
+            'wu' => $type['wu'],
+            'cheque' => $type['cheque'],
+            'maintenance' => $type['maintenance'],
+            'date_from' => $date_from,
+            'date_till' => $date_till,
+            'paid_from' => $paid_from,
+            'paid_till' => $paid_till,
+            'credit' => $credit,
+            'debit' => $debit,
+            'username' => $username_filter,
+            'includereseller' => $includereseller,
+            'pageIndex' => request()->input('pageIndex', 1),
+            'pageSize' => request()->input('pageSize', 999999),
         ];
         $response = Http::withBasicAuth($username, $password)
             ->withoutVerifying()
             ->get($url, $search_params)
             ->json()['data'];
-        return $response;
+        $table_data = [];
+        foreach ($response as $item) {
+            $table_data[] = $item;
+        }
+        return $table_data;
+    }
+
+    public static function get_audit($date_from, $date_till, $user = '', $type = '', $username = '')
+    {
+        $radius_username = 'admin';
+        $radius_password = 'CloudSP_@2025';
+        $url = 'https://10.255.1.10/api/audit/list/';
+        $search_params = [
+            'date_from' => $date_from,
+            'date_till' => $date_till,
+            'pageIndex' => 1,
+            'pageSize' => 999999,
+        ];
+        $response = Http::withBasicAuth($radius_username, $radius_password)
+            ->withoutVerifying()
+            ->get($url, $search_params)
+            ->json()['data'];
+        $table_data = [];
+        foreach ($response as $item) {
+            if (
+                ($user == '' || $item['user'] == $user) &&
+                ($type == '' || $item['object_type'] == $type) &&
+                ($username == '' || $item['object_id'] == $username)
+            ) {
+                $table_data[] = $item;
+            }
+        }
+        return $table_data;
     }
 }

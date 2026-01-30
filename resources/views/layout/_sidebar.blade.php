@@ -24,6 +24,11 @@
                     TRANSACTIONS
                     <i class="fa fa-money-bill-wave me-1"></i>
                 </a>
+                <a href="{{ route('dashboard.audit_form') }}"
+                    class="d-flex justify-content-between align-items-center btn-glass-light fw-bold text-decoration-none">
+                    AUDIT LOGS
+                    <i class="fas fa-magnifying-glass-chart me-1"></i>
+                </a>
                 <a href="{{ route('dashboard.support') }}"
                     class="d-flex justify-content-between align-items-center btn-glass-light fw-bold text-decoration-none">SUPPORT
                     <i class="fa fa-phone me-1"></i> </a>

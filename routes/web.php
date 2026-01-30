@@ -25,6 +25,8 @@ Route::prefix('/dashboard')->name('dashboard.')->group(function () {
     Route::get('/payments', [DashboardController::class, 'payments'])->name('payments');
     Route::get('/transactions/form', [DashboardController::class, 'transactions_form'])->name('transactions_form');
     Route::get('/transactions', [DashboardController::class, 'transactions'])->name('transactions');
+    Route::get('/audit/form', [DashboardController::class, 'audit_form'])->name('audit_form');
+    Route::get('/audit', [DashboardController::class, 'audit'])->name('audit');
     Route::get('/support', [DashboardController::class, 'support'])->name('support');
     Route::get('/graphs', [DashboardController::class, 'graphs'])->name('graphs');
 });

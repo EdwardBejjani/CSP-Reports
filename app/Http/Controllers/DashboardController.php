@@ -96,15 +96,18 @@ class DashboardController extends Controller
             $date = Carbon::now()->format('Y-m');
         }
         $user = Auth::user();
-        $allPayments = Dashboard::payments($user->username, $date, $collector);
+        $date_from = Carbon::createFromFormat('Y-m', $date)->startOfMonth()->format('Y-m-d');
+        $date_till = Carbon::createFromFormat('Y-m', $date)->endOfMonth()->format('Y-m-d');
+        $allPayments = Dashboard::payments($user->username, $date_from, $date_till, $collector);
 
         $perPage = 17;
         $currentPage = request()->input('page', 1);
         $currentPageItems = array_slice($allPayments, ($currentPage - 1) * $perPage, $perPage);
         $payments = new LengthAwarePaginator($currentPageItems, count($allPayments), $perPage, $currentPage, [
             'path' => $request->url(),
-            'query' => $request->query(),
         ]);
+
+        $payments->appends($request->except('page'));
 
         return view('dashboard.payments', [
             'payments' => $payments,
@@ -249,14 +252,44 @@ class DashboardController extends Controller
         $username = $request->input('username');
         $includereseller = $request->input('includereseller');
         $resellers = Dashboard::get_resellers();
-        $allTransactions = Dashboard::get_transactions($date_from, $date_till, $paid_from, $paid_till, $credit, $debit, $username, $includereseller, $type);
-
-        $perPage = 15;
+        $perPage = 17;
         $currentPage = request()->input('page', 1);
+        $allTransactions = Dashboard::get_transactions($date_from, $date_till, $includereseller, $paid_from, $paid_till, $credit, $debit, $username, $type);
         $currentPageItems = array_slice($allTransactions, ($currentPage - 1) * $perPage, $perPage);
-        $transactions = new LengthAwarePaginator($currentPageItems, count($allTransactions), $perPage, $currentPage);
+        $transactions = new LengthAwarePaginator($currentPageItems, count($allTransactions), $perPage, $currentPage, [
+            'path' => $request->url(),
+        ]);
+
+        $transactions->appends($request->except('page'));
 
         return view('dashboard.transactions', compact('transactions', 'resellers', 'date_from', 'date_till', 'paid_from', 'paid_till', 'username', 'includereseller', 'type'));
+    }
 
+    public function audit_form()
+    {
+        $date_from = Carbon::now()->startOfMonth()->format('Y-m-d');
+        $date_till = Carbon::now()->format('Y-m-d');
+        $resellers = Dashboard::get_resellers();
+        return view('dashboard.audit', compact('date_from', 'date_till', 'resellers'));
+    }
+    public function audit(Request $request)
+    {
+        $date_from = $request->input('date_from');
+        $date_till = $request->input('date_till');
+        $user = $request->input('user');
+        $type = $request->input('type');
+        $username = $request->input('username');
+        $resellers = Dashboard::get_resellers();
+        $perPage = 17;
+        $currentPage = request()->input('page', 1);
+        $allAudit = Dashboard::get_audit($date_from, $date_till, $user, $type, $username);
+        $currentPageItems = array_slice($allAudit, ($currentPage - 1) * $perPage, $perPage);
+        $audit = new LengthAwarePaginator($currentPageItems, count($allAudit), $perPage, $currentPage, [
+            'path' => $request->url(),
+        ]);
+
+        $audit->appends($request->except('page'));
+
+        return view('dashboard.audit', compact('audit', 'date_from', 'date_till', 'user', 'type', 'username', 'resellers'));
     }
 }
